@@ -24,7 +24,7 @@ yarn add deepsorter
 ### Example object with 4 layers deep
 
 ```
-import deepSorter from "deepsorter"
+import { deepSorter } from "deepsorter";
 
 // example data
 const data = {
