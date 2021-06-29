@@ -1,0 +1,22 @@
+{
+  "name": "deepsorter",
+  "version": "1.0.1",
+  "description": "A dead simple library to sort objects regardless of how deep is the object",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest --config=jest.config.json",
+    "prepublish": "npm test"
+  },
+  "keywords": ["sort", "javascript", "typescript", "object", "deep"],
+  "author": "Rex Low",
+  "homepage": "https://github.com/rexlow/deepSorter",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^26.0.23",
+    "jest": "^27.0.5",
+    "ts-jest": "^27.0.3",
+    "typescript": "^4.3.4"
+  }
+}
