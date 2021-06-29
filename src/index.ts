@@ -36,5 +36,4 @@ function deepSorter(o: any, reverse: boolean = false): any {
   )
 }
 
-export {};
-module.exports = deepSorter;
+export default deepSorter;

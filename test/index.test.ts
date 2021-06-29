@@ -1,4 +1,4 @@
-const deepSorter = require("../src/index");
+import deepSorter from "../src/index"
 
 const complexData = {
   "c": ["APPLE", "ORANGE", "BANANA"],
