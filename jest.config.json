@@ -1,5 +1,5 @@
 {
-    "name": "deepsort",
+    "name": "deepSort",
     "preset": "ts-jest",
     "testRegex": "./test/.*",
     "testEnvironment": "node"

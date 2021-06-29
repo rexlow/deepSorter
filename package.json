@@ -1,6 +1,6 @@
 {
   "name": "deepsorter",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A dead simple library to sort objects regardless of how deep is the object",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

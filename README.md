@@ -1,5 +1,10 @@
 # deepSorter 🎡
 
+![npm](https://img.shields.io/npm/v/deepsorter)
+![npm](https://img.shields.io/npm/dm/deepsorter)
+![npm bundle size](https://img.shields.io/bundlephobia/min/deepsorter)
+[![GitHub issues](https://img.shields.io/github/issues/rexlow/deepSorter)](https://github.com/rexlow/deepSorter/issues)
+
 Originally **deepSorter** is made to make my life easier dealing with payment signature generation work in my company.
 
 **deepSorter** is designed to sort any `object` or `array` alphabetically (or in its reverse order) regardless of numbers of layers deep.
@@ -24,7 +29,7 @@ yarn add deepsorter
 ### Example object with 4 layers deep
 
 ```
-import { deepSorter } from "deepsorter";
+import deepSorter from "deepsorter"
 
 // example data
 const data = {

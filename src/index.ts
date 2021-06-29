@@ -1,13 +1,13 @@
 const collator = new Intl.Collator(undefined, { numeric: true, sensitivity: 'base' });
 
-function sortArr(array: any[], reverse: boolean = false): any[] {
+const sortArr = function f(array: any[], reverse: boolean = false, func: Function): any[] {
   let arr: any = [];
   for (let i = 0; i < array.length; i++) {
     const x = array[i];
     if (typeof x === 'string' || typeof x === 'number') {
       arr.push(x)
     } else {
-      arr.push(deepSorter(x, reverse))
+      arr.push(func(x, reverse))
     }
   }
   arr = arr.sort(collator.compare)
@@ -15,16 +15,16 @@ function sortArr(array: any[], reverse: boolean = false): any[] {
   return arr;
 }
 
-export function deepSorter(o: any, reverse: boolean = false): any {
+function deepSorter(o: any, reverse: boolean = false): any {
   let ops = Object.keys(o).sort();
   if (reverse)
     ops = ops.reverse();
-  if (Array.isArray(o)) return sortArr(o, reverse);
+  if (Array.isArray(o)) return sortArr(o, reverse, deepSorter);
   return ops.reduce(
     (obj: any, key: string) => {
       const p = o[key];
       if (Array.isArray(p)) {
-        obj[key] = sortArr(p, reverse);
+        obj[key] = sortArr(p, reverse, deepSorter);
       } else if (typeof p === 'object') {
         obj[key] = deepSorter(p, reverse);
       } else {
@@ -36,4 +36,5 @@ export function deepSorter(o: any, reverse: boolean = false): any {
   )
 }
 
+export {};
 module.exports = deepSorter;
